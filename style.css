@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Poppins:ital,wght@0,100;0,200;1,100&family=Roboto+Serif:ital,wght@0,100;0,200;1,100&display=swap');
 :root{
     --playfair:'playfair Display', serif;
-    /* --Quicksand: 'Quicksand', sans-serif; */
+     --Quicksand: 'Quicksand', sans-serif; 
     --Roboto:'Roboto', sans-serif;
     --dark:#3c393d;
     --exDark:#2b2b2b;
     --crimson: crimson;
+    --white:#fff;
+
 }
 
 *{
@@ -23,7 +25,7 @@
 .navbar {
     position: fixed;
     width: 100%;
-    background:crimson ; 
+    z-index: 999;
     font-family:var(--playfair) ;
     padding: 30px 0;
     transition: all 0.3s ease;
@@ -38,8 +40,14 @@
     font-size: 35px;
     font-weight: 600;
 }
+
 .navbar .logo a span{
     color:var(--crimson);
+    transition: color 0.3s ease;
+}
+
+.navbar.sticky .logo a span{
+    color:var(--white);
 }
 .navbar .menu li{
     list-style: none;
@@ -51,7 +59,7 @@
     
 }
 .navbar .menu li a{
-    color: #fff;
+    color: var(--white);
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -61,7 +69,13 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 }
+ /* menu styling */
+ .menu-btn{
+color: #fff;
+font-size: 23px;
+cursor: pointer;
 
+}
 
 /* home section styling */
 .home{
@@ -69,7 +83,7 @@ justify-content: space-between;
     height: 100vh;
     background: url(assets/img/bg.jpg)  no-repeat center;
     background-size: cover;
-    color:#fff;
+    color:var(--white);
     min-height: 500px;
     font-family: sans-serif;
 
@@ -94,4 +108,376 @@ justify-content: space-between;
 .home .home-content .text-3 span{
     color:var(--crimson);
     font-weight: 500;
+}
+.home .home-content a{
+    background: var(--crimson);
+    color: var(--white);
+    font-size: 25px;
+    display: inline-block;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border:2px solid var(--crimson);
+    transition: color 0.3s ease;
+}
+.home .home-content a:hover{
+    color: var(--white);
+    background: none;
+}
+/* all similar content styling code */
+section{
+    padding: 100px 0;
+}
+.about, .services , .skills{
+    font-family:var(--Quicksand), sans-serif;
+}
+.about .about-content .services .serv-content .skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom:60px ;
+    padding-bottom: 20px;
+    font-family: var(--Roboto), sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: var(--exDark);
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    color: var(--crimson);
+    padding: 5px;
+    font-size: 20px;
+    background: var(--white);
+    transform: translateX(-50%);
+}
+/* about section styling */
+
+.about .title::after{
+    content: "Who am I";
+}
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+background: green;
+}
+
+
+ .about .about-content .left .image {
+   height: 400px;
+   width: 400px;
+   object-fit: cover;
+   border-radius: 6px;
+ }
+ .about .about-content .right{
+    width: 55%;
+    
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+color: var(--crimson);
+}
+.about .about-content .right p{
+    text-align: justify;}
+
+.about .about-content .right a{
+    background: var(--crimson);
+    color: var(--white);
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border:2px solid var(--crimson);
+    transition: color 0.3s ease;
+}
+.about .about-content a:hover{
+    color: var(--crimson);
+    background: none;
+}
+/*services styling starts */
+.services{
+    background-color: var(--exDark);
+    color: #fff;
+}
+.serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services .title::before{
+    background: var(--white);
+}
+    .services .title::after{
+        background: var(--exDark);
+        content: "what I provide";
+    }
+    .services .serv-content .card{
+        width:calc(33%- 20px);
+        text-align:center;
+        background: black;
+        border-radius: 6px;
+        padding: 20px 25px;
+        cursor: pointer;
+    }
+   
+ .services .serv-content .card i{
+     font-size: 50px;
+     color: var(--crimson);
+     transition:color 0.3s ease;
+ }
+ .services .serv-content .card .text{
+     font-size: 25px;
+     font-weight: 500;
+     margin: 10px 0 7px;
+ }
+ .services .serv-content .card .box{
+     transition: all 0.3s ease;
+     
+ }
+ .services .serv-content .card:hover{
+     background:var(--crimson);
+ }
+ .services .serv-content .card:hover .box{
+    transform: scale(1.05);
+ }
+ .services .serv-content .card:hover i{
+  color:var(--white);
+ }
+ /* skill section styling */
+  .skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .title::after{
+    content: "What I know";
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+font-size: 25px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+.skills .skills-content .left a{
+    background: var(--crimson);
+    color: var(--white);
+    font-size: 18px;
+    display: inline-block;
+    padding: 11px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border:2px solid var(--crimson);
+    transition: color 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: var(--crimson);
+    background: none;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: var(--crimson);
+}
+.skills .skills-content .right .html::after{
+width:90%;
+}
+/* team styling section begins 
+.teams{
+    font-family:var(--Quicksand), sans-serif;
+}
+.teams .title::after{
+    content: "Who's with me";
+    background: var(--exDark);
+}
+.teams{
+    background: var(--exDark);
+    color: #fff;
+}
+.teams .title::before{
+    background: var(--white);
+}
+.teams .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+}
+.teams .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border:5px solid var(--crimson);
+} */
+
+
+
+/* responsive media query*/ 
+@media (max-width: 1300px){
+
+    .home .max-width{
+
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1104px){
+    .about .about-content .left .image {
+        height: 350px;
+        width: 350px;
+
+      }
+}
+@media (max-width: 991px){
+    .max-width{
+    padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px){
+.max-width{
+    padding: 0 50px;
+}
+.menu-btn{
+    display:block;
+    z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+.navbar .menu{
+    position: fixed;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    text-align: center;
+    padding-top:80px ;
+}
+.navbar .menu.active{
+left: 0;
+}
+ .navbar .menu li{
+    display: block;
+} 
+.navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size:25px ;
+}
+.home .home-content .text-2{
+    font-size: 70px;
+}
+
+.home .home-content .text-3{
+    font-size: 35px;
+    padding: 10px 30px;
+}
+.home.home-content a{
+    font-size: 23px;
+    padding: 10px 30px;
+}
+.max-width{
+    max-width: 800px;
+
+}
+.about .about-content .column{
+    width: 10%;
+}
+.about .about-content .left{
+   display: flex;
+   justify-content:center;
+   margin: 0 auto 60px;
+}
+.about .about-content .right{
+    flex: 100%;
+}
+.services .serv-content .card{
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+.skills .skills-content .column {
+    width: 100%;
+    margin-bottom: 35px;
+}
+@media (max-width:690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px; }
+}
 }
