@@ -324,15 +324,35 @@ margin-bottom: 10px;
     background: lightgrey;
     position: relative;
 }
-.skills .skills-content .right .line::before{
+
+/* Styling for skills progress bar */
+
+.skills .skills-content .line::before{
     content: "";
     position: absolute;
     height: 100%;
-    width: 80%;
+    width: 50%;
     left: 0;
     top: 0;
     background: var(--crimson);
 }
+
+
+.skills .skills-content .css::before{
+    width: 68%;
+}
+
+.skills .skills-content .Javascript::before{
+    width: 80%;
+}
+.skills .skills-content .php::before{
+    width: 50%;
+}
+.skills .skills-content .MySQL::before{
+    width: 70%;
+}
+/* Styling End */
+
 .skills .skills-content .right .html::after{
 width:90%;
 }
