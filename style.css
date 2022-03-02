@@ -9,7 +9,6 @@
     --white:#fff;
 
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -181,7 +180,7 @@ section .title::after{
 
 .about .about-content .left{
     width: 45%;
-background: green;
+/* background: green; */
 }
 
 
@@ -337,7 +336,7 @@ margin-bottom: 10px;
 .skills .skills-content .right .html::after{
 width:90%;
 }
-/* team styling section begins 
+team styling section begins 
 .teams{
     font-family:var(--Quicksand), sans-serif;
 }
@@ -363,7 +362,7 @@ width:90%;
     object-fit: cover;
     border-radius: 50%;
     border:5px solid var(--crimson);
-} */
+}
 
 
 
