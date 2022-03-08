@@ -5,7 +5,7 @@
   --Roboto: "Roboto", sans-serif;
   --dark: #3c393d;
   --exDark: #222;
-  --crimson:  crimson;
+  --crimson: crimson;
   --white: #fff;
 }
 * {
@@ -14,8 +14,8 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-html{
-  scroll-behavior:smooth ;
+html {
+  scroll-behavior: smooth;
 }
 .max-width {
   max-width: 1300px;
@@ -74,9 +74,9 @@ html{
   color: #fff;
   font-size: 23px;
   cursor: pointer;
-  display:none;
+  display: none;
 }
-.scroll-up-btn{
+.scroll-up-btn {
   position: fixed;
   height: 45px;
   width: 42px;
@@ -94,7 +94,7 @@ html{
   pointer-events: none;
   transition: all 0.3s ease;
 }
-.scroll-up-btn.show{
+.scroll-up-btn.show {
   opacity: 1;
   pointer-events: auto;
   bottom: 30px;
@@ -151,7 +151,9 @@ section {
 }
 .about,
 .services,
-.skills, footer, .teams {
+.skills,
+footer,
+.teams {
   font-family: var(--Quicksand), sans-serif;
 }
 .about .about-content .services .serv-content .skills .skills-content {
@@ -294,7 +296,7 @@ section .title::after {
   color: var(--white);
 }
 /* skill section styling */
-.skills .skills-content  {
+.skills .skills-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -303,7 +305,7 @@ section .title::after {
 .skills .title::after {
   content: "What I know";
 }
-.skills .skills-content .column{
+.skills .skills-content .column {
   width: calc(50% - 30px);
 }
 .skills .skills-content .left .text {
@@ -359,8 +361,8 @@ section .title::after {
   background: var(--crimson);
 }
 .skills .skills-content .right .html::before {
-    width: 90%;
-  }
+  width: 90%;
+}
 
 .skills .skills-content .css::before {
   width: 68%;
@@ -376,23 +378,22 @@ section .title::after {
   width: 70%;
 }
 
-
 .skills .skills-content .right .html::after {
   width: 90%;
 }
 /* Styling End */
 
 /* teams styling begins */
- .teams {
+.teams {
   font-family: var(--Quicksand), sans-serif;
 }
 .teams .title::after {
-  content: "Who's with me";
-  background:#111;
+  content: "What I have done";
+  background: #111;
 }
 .teams {
   background: #111;
-  color: #fff;
+  color: var(--white);
 }
 .teams .title::before {
   background: var(--white);
@@ -402,96 +403,106 @@ section .title::after {
   border-radius: 9px;
   padding: 25px 35px;
   text-align: center;
-  display: grid!important;
+  display: grid !important;
   transition: all 0.3s ease;
   cursor: pointer;
-
 }
 .teams .carousel .card:hover {
   background: var(--crimson);
-
 }
- .teams .carousel .card img {
+.teams .carousel .card img {
   height: 150px;
-  width: 150px;
+  width: 300px;
   object-fit: cover;
   border-radius: 5%;
   border: 5px solid var(--crimson);
   display: grid;
-} 
-.teams .carousel .card:hover img{
-  border-color:var(--white  );
 }
-.teams .carousel .card .box{
+.teams .carousel .card:hover .box a {
+  color: var(--exDark);
+}
+.teams .carousel .card:hover .box p {
+  color: var(--white);
+}
+.teams .carousel .card:hover img {
+  border-color: var(--white);
+}
+.teams .carousel .card .box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-
 }
-.teams .carousel .card.card:hover .box{
+.teams .carousel .card .box a {
+  color: var(--crimson);
+  transition: all 0.3s ease;
+}
+.teams .carousel .card .box a:hover {
+  color: var(--exDark);
+  text-decoration: underline;
+}
+.teams .carousel .card.card:hover .box {
   transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.teams .carousel .card .text {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
 
-.owl-dots{
-text-align: center;
-margin-top: 20px;
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
 }
-.owl-dot{
+.owl-dot {
   height: 13px;
   width: 13px;
   margin: 0 5px;
-  outline: none!important;
+  outline: none !important;
   border-radius: 5px;
-  border: 2px solid var(--crimson)!important;
+  border: 2px solid var(--crimson) !important;
   transition: all 0.3s ease;
 }
-.owl-dot.active{
-width: 35px;
-border-radius: 14px;
-
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
 }
 .owl-dot.active,
-.owl-dot:hover{
-  background:var(--crimson)!important;
+.owl-dot:hover {
+  background: var(--crimson) !important;
 }
 /* contact section styling */
-.contact{
+.contact {
   font-family: var(--Quicksand), sans-serif;
 }
-.contact .title::after{
+.contact .title::after {
   content: "get in touch";
 }
 
-.contact .contact-content  {
+.contact .contact-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
-.contact .contact-content .column{
+.contact .contact-content .column {
   width: calc(50% - 30px);
 }
-.contact .contact-content .text{
+.contact .contact-content .text {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.contact .contact-content .left p{
+.contact .contact-content .left p {
   text-align: justify;
 }
-.contact .contact-content .left .icons{
+.contact .contact-content .left .icons {
   margin: 10px 0;
 }
-.contact .contact-content .row{
+.contact .contact-content .row {
   display: flex;
   height: 65px;
   align-items: center;
@@ -499,14 +510,14 @@ border-radius: 14px;
 .contact .contact-content .row .info {
   margin-left: 30px;
 }
-.contact .contact-content .row i{
-font-size: 25px;
-color: var(--crimson);
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: var(--crimson);
 }
-.contact .contact-content .info .head{
+.contact .contact-content .info .head {
   font-weight: 500;
 }
-.contact .contact-content .row .sub-title{
+.contact .contact-content .row .sub-title {
   color: #333;
 }
 
@@ -514,23 +525,23 @@ color: var(--crimson);
   display: flex;
 }
 .contact .right form .field,
-.contact .right form .fields .field{
+.contact .right form .fields .field {
   height: 45px;
-  width: 100%; 
+  width: 100%;
   margin-bottom: 15px;
 }
-.contact .right form .name{
+.contact .right form .name {
   margin-right: 10px;
 }
 .contact .right form .email {
   margin-left: 10px;
 }
-.contact .right form .textarea{
+.contact .right form .textarea {
   height: 80px;
   width: 100%;
 }
 .contact .right form .field input,
-.contact .right form .textarea textarea{
+.contact .right form .textarea textarea {
   height: 100%;
   width: 100%;
   border: 1px solid lightgrey;
@@ -540,49 +551,46 @@ color: var(--crimson);
   font-size: 17px;
   font-family: var(--playfair);
 }
-.contact .right form .textarea textarea{
-  padding-top:10px ;
+.contact .right form .textarea textarea {
+  padding-top: 10px;
   resize: none;
 }
-.contact .right form .button{
+.contact .right form .button {
   height: 47px;
-  width:170px;
+  width: 170px;
   margin-bottom: 50px;
 }
-.contact .right form .button button{
+.contact .right form .button button {
   width: 100%;
   height: 100%;
-  border: 2px solid var(--crimson); 
+  border: 2px solid var(--crimson);
   background: var(--crimson);
   font-size: 20px;
   font-weight: 500;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease ;
-
+  transition: all 0.3s ease;
 }
-.contact .right form .button button:hover{
+.contact .right form .button button:hover {
   color: var(--crimson);
   background: none;
 }
 
 /* footer section */
-footer{
+footer {
   background: var(--exDark);
   padding: 20px 23px;
   color: var(--white);
   text-align: center;
 }
 
-footer span a{
+footer span a {
   color: var(--crimson);
   text-decoration: none;
 }
-footer span a:hover{
+footer span a:hover {
   text-decoration: underline;
 }
-
- 
 
 /* responsive media query*/
 @media (max-width: 1300px) {
