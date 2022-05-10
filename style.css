@@ -704,4 +704,12 @@ footer span a:hover {
       font-size: 27px;
     }
   }
+
+}
+@media (max-width: 346px){
+  .teams .title::after {
+    content: "What I have done";
+    background: #111;
+    font-size: 16px;
+  }
 }
